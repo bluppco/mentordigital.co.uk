@@ -1,12 +1,12 @@
 ---
-import { endpointFetch } from "../functions/endpoint"
+// import { endpointFetch } from "../functions/endpoint"
 
-const runtime = Astro.locals.runtime;
-const endpoint = endpointFetch( runtime.env.ENVIRONMENT )
+// const runtime = Astro.locals.runtime;
+// const endpoint = endpointFetch( runtime.env.ENVIRONMENT )
 
-// NETWORK CALL TO GET DATA
-const network_data = await fetch( endpoint + "/home" )
-const data_json = await network_data.json()
+// // NETWORK CALL TO GET DATA
+// const network_data = await fetch( endpoint + "/home" )
+// const data_json = await network_data.json()
 
 // IMPORT ASTRO COMPONENTS
 import Layout from "../layouts/Layout.astro"
@@ -14,4 +14,8 @@ import HeaderBanner from "../components/common/HeaderBanner.astro"
 ---
 <Layout>
 	<HeaderBanner />
+	<section class="bg-mentor_red h-[80vh] w-full">
+		<h1 class="font-raleway font-bold text-white text-4xl">We are Mentor Digital</h1>
+		<p class="font-raleway font-light text-white text-3xl">A full service digital agency based in Bristol and London</p>
+	</section>
 </Layout>
